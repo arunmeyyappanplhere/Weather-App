@@ -1,66 +1,53 @@
-Here’s a clean and professional **GitHub README.md** for your Weather App:
+# 🌌 Aurora Weather — Liquid Glass Forecast
+
+A beautiful, interactive weather web app built with **React + Vite**, featuring a **liquid-glass UI**, a **3D backdrop that reacts to your mouse**, real-time conditions, and a full **7-day + 24-hour forecast**.
 
 ---
 
-# 🌦️ Weather Forecast Pro
+## ✨ Features
 
-A simple and elegant weather forecasting web application built using **React.js**, providing real-time weather updates for any city using the **OpenWeatherMap API**.
-
----
-
-## 🚀 Features
-
-* 🌤️ Real-time weather data
-* 🔍 Search weather by city name
-* 🌡️ Displays temperature, humidity, and wind speed
-* 🖼️ Dynamic weather icons
-* 📍 Default location set to **Trichy** (auto-loads on page load)
-* 🎨 Clean UI with responsive design
+- 🔍 **Search any city** (press Enter or click 🔍) + quick-pick city chips
+- 📍 **"My Location"** — auto-detects where you are using geolocation
+- 🌡️ **Live weather** — temperature, feels-like, description & animated icon
+- 📅 **7-Day Forecast** — day/date, icon, rain chance and min/max range bars
+- ⏰ **Next 24 Hours** — scrollable hourly strip with temps & rain chance
+- 🧭 **Today's Details** — humidity, wind + compass, pressure, visibility, UV index, precipitation, sunrise & sunset
+- 🕓 **Live clock** with full date, plus the **local time** of the place you searched
+- 🌡️ **°C / °F toggle**
+- 🧊 **Liquid-glass design** — frosted panels, aurora background, cursor glow
+- 🎇 **Interactive 3D** — glass cubes, orbs & rings that parallax with your mouse, and a hero card that tilts toward your cursor
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **React.js**
-* **JavaScript (ES6)**
-* **CSS**
-* **OpenWeatherMap API**
+- **React 19 + Vite**
+- Plain **CSS** (glassmorphism & 3D transforms — no UI libraries)
+- **OpenWeatherMap API** → current conditions
+- **Open-Meteo API** → 7-day & hourly forecast (free, no key needed)
 
 ---
 
-## 📦 Installation & Setup
-
-### 1️⃣ Clone the repository
+## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-```
+# 1. Clone & enter the project
+git clone https://github.com/arunmeyyappanplhere/Weather-App.git
+cd Weather-App
 
-### 2️⃣ Install dependencies
-
-```bash
+# 2. Install dependencies
 npm install
-```
 
-### 3️⃣ Create environment variable
+# 3. Add your OpenWeatherMap API key
+#    Create a .env file in the project root:
+echo VITE_APP_ID=your_api_key_here > .env
+#    Free key: https://openweathermap.org/api
 
-Inside the project root, create a `.env` file and add:
-
-```env
-VITE_APP_ID=your_openweathermap_api_key
-```
-
-Get your API key from: [https://openweathermap.org/api](https://openweathermap.org/api)
-
-### 4️⃣ Start the development server
-
-```bash
+# 4. Run it
 npm run dev
 ```
 
-Your app will now run on:
-👉 [http://localhost:5173](http://localhost:5173) (Vite default)
+Then open 👉 **http://localhost:5173**
 
 ---
 
@@ -68,49 +55,25 @@ Your app will now run on:
 
 ```
 src/
-├── assets/          # Weather icons & images
+├── assets/            # Weather icons (sun, cloud, rain, snow…)
 ├── components/
-│   └── Weather.jsx  # Main Weather Component
+│   ├── Weather.jsx    # All app logic + UI
+│   └── Weather.css    # Glass, aurora & 3D styling
 ├── App.jsx
-├── main.jsx
-└── Weather.css      # Styling
+├── index.css
+└── main.jsx
 ```
 
 ---
 
-## ✨ How It Works
+## 💡 How It Works
 
-* User enters a city name
-* App fetches weather data from OpenWeatherMap API
-* Proper icon is chosen based on `weather[0].icon`
-* UI updates dynamically with temperature, wind, humidity, and city
-
----
-
-## 🧪 Future Enhancements
-
-* 🌍 Auto-detect location using geolocation
-* 📅 7-day forecast
-* ☁️ Animated weather visuals
-* 🔔 Error toast notifications
+1. You search a city (or hit **My Location**).
+2. OpenWeatherMap returns the **current conditions + coordinates**.
+3. Those coordinates are passed to **Open-Meteo**, which supplies the **7-day and hourly forecast**.
+4. Everything renders in frosted-glass panels over an animated 3D scene — **move your mouse around and watch it respond! ✨**
 
 ---
 
-## 📝 License
+⭐ If you like this project, give it a star on GitHub!
 
-This project is licensed under the **MIT License**.
-
----
-
-## 🤝 Contributing
-
-Pull requests are welcome.
-For major changes, open an issue first to discuss what you’d like to change.
-
----
-
-## ⭐ Show Your Support
-
-If you like this project, consider giving it a ⭐ on GitHub!
-
----

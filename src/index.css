@@ -7,9 +7,13 @@
   box-sizing: border-box;
 }
 
+html, body{
+  overflow-x: hidden;
+}
+
 .app{
   min-height: 100vh;
   display: grid;
-  background: #e2d4ff;
+  background: #0d1230; /* fallback behind the fixed glass backdrop */
   font-family: "Poppins", sans-serif;
 }
